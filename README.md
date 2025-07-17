@@ -1,9 +1,14 @@
 # TaskManagerApp
+This is a task management application built using Angular 17. Users can create,edit, delete, and manage tasks efficiently. It also features a Dark/Light mode toggle for better user experience.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.17.
 
-## Development server
 
+## Development server
+Install dependencies and start the dev server:
+bash
+npm install
+ng serve
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
 ## Code scaffolding
