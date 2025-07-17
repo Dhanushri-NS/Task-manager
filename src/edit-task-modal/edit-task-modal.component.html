@@ -1,0 +1,37 @@
+<!-- <div class="modal-backdrop">
+  <div class="modal-content">
+    <button class="close-btn" (click)="onCancel()">×</button>
+
+    <h2>Edit Task</h2>
+
+    <label>Title:</label>
+    <input [(ngModel)]="title" />
+
+    <label>Description:</label>
+    <textarea [(ngModel)]="description"></textarea>
+
+    <div class="actions">
+      <button (click)="onSave()">Save</button>
+      <button (click)="onCancel()">Cancel</button>
+    </div>
+  </div>
+</div>
+ -->
+<div class="modal-backdrop">
+  <div class="modal-content">
+    <button class="close-btn" (click)="onCancel()">×</button>
+
+    <h2>Edit Task</h2>
+
+    <label for="task-title">Title:</label>
+    <input id="task-title" [(ngModel)]="title" />
+
+    <label for="task-desc">Description:</label>
+    <textarea id="task-desc" [(ngModel)]="description"></textarea>
+
+    <div class="actions">
+      <button class="save-btn" (click)="onSave()">Save</button>
+      <button class="cancel-btn" (click)="onCancel()">Cancel</button>
+    </div>
+  </div>
+</div>

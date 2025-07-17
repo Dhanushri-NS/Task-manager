@@ -1,0 +1,164 @@
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 2rem;
+  width: 90%;
+  max-width: 500px;
+  border-radius: 10px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+  position: relative;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.close-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #999;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.close-btn:hover {
+  color: #000;
+}
+
+
+.modal-content label {
+  display: block;
+  margin-top: 1rem;
+  margin-bottom: 0.3rem;
+  font-weight: 600;
+}
+
+.modal-content input,
+.modal-content textarea {
+  width: 100%;
+  padding: 0.7rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+.modal-content textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.actions {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.8rem;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.save-btn {
+  background-color: #28a745;
+  color: white;
+}
+
+.save-btn:hover {
+  background-color: #218838;
+}
+
+.cancel-btn {
+  background-color: #dc3545;
+  color: white;
+}
+
+.cancel-btn:hover {
+  background-color: #c82333;
+}
+
+.task-item button {
+  background-color: #17a2b8;
+  color: white;
+}
+
+.task-item button:hover {
+  background-color: #138496;
+}
+
+.add-task-section button {
+  background-color: #007bff;
+  color: white;
+}
+
+.add-task-section button:hover {
+  background-color: #0056b3;
+}
+
+.priority-select select {
+  background-color: #fff;
+  color: #000;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+::ng-deep body.dark-mode .modal-content {
+  background-color: #1e1e1e !important;
+  color: white;
+}
+
+::ng-deep body.dark-mode .modal-content input,
+::ng-deep body.dark-mode .modal-content textarea {
+  background-color: #2a2a2a !important;
+  border-color: #555;
+  color: white;
+}
+
+::ng-deep body.dark-mode .close-btn {
+  color: #fff;
+}
+
+::ng-deep body.dark-mode .save-btn {
+  background-color: #28a745;
+}
+
+::ng-deep body.dark-mode .cancel-btn {
+  background-color: #dc3545;
+}
+
+::ng-deep body.dark-mode .task-item button {
+  background-color: #006064;
+}
+
+::ng-deep body.dark-mode .priority-select select {
+  background-color: #2a2a2a;
+  color: #fff;
+  border-color: #555;
+}

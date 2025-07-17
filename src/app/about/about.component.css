@@ -1,0 +1,128 @@
+/*Base Light Mode */
+.about-container {
+  max-width: 900px;
+  margin: 3rem auto;
+  padding: 2.5rem 3rem;
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #343a40;
+  line-height: 1.8;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.intro-text {
+  font-size: 1.25rem;
+  color: #212529;
+  margin-bottom: 2rem;
+  border-left: 4px solid #007bff;
+  background: #f1f9ff;
+  border-radius: 4px;
+  padding: 1rem;
+  font-style: italic;
+}
+
+h3 {
+  margin-top: 2.5rem;
+  font-size: 1.5rem;
+  color: #007bff;
+  position: relative;
+}
+
+h3::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 50px;
+  height: 3px;
+  background-color: #007bff;
+  border-radius: 2px;
+}
+
+
+ul.tech-list {
+  padding-left: 1.5rem;
+  margin-top: 1rem;
+}
+
+
+ul.tech-list li {
+  margin-bottom: 0.75rem;
+  list-style-type: none;
+  position: relative;
+  padding-left: 1.2rem;
+  /* color: #495057; */
+}
+
+strong {
+  color: #000;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #ccc;
+  margin: 2.5rem 0;
+}
+
+/*  Tick List */
+.tick-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 1rem;
+
+}
+
+.tick-list li {
+  margin-bottom: 0.75rem;
+  font-size: 1.05rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  /* color: #333; */
+}
+
+.tick-list li i {
+  color: #28a745;
+}
+
+/* Dark Mode  */
+::ng-deep body.dark-mode .about-container {
+  background-color: #1e1e1e;
+  color: white;
+}
+
+::ng-deep body.dark-mode .intro-text {
+  color: #e0e0e0;
+  font-style: italic;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+  border-left: 4px solid #4dabf7;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 6px;
+}
+
+::ng-deep body.dark-mode h3 {
+  color: #66b2ff;
+}
+
+
+::ng-deep body.dark-mode ul.tech-list li {
+  color: white;
+}
+
+::ng-deep body.dark-mode ul.tick-list li {
+  color: white;
+}
+
+::ng-deep body.dark-mode .tick-list li i {
+  color: #28a745;
+}
+
+::ng-deep body.dark-mode strong {
+  color: #ffffff;
+}
+
+::ng-deep body.dark-mode hr {
+  border-top: 1px solid #444;
+}

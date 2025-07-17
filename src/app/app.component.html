@@ -1,0 +1,14 @@
+<nav>
+  <h1 class="titlename">Task Manager</h1>
+  <div class="nav-links">
+   <span (click)="toggleTheme()" class="theme-icon" title="Toggle Theme">
+  <i [class]="isDarkMode ? 'fas fa-moon' : 'fas fa-sun'"></i>
+</span>
+
+    <a routerLink="/">Tasks</a>  |
+    <a routerLink="/about">About</a>
+    
+  </div>
+</nav>
+<hr />
+<router-outlet></router-outlet>

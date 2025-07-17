@@ -1,0 +1,60 @@
+<!--  No tasks are available message will displayed -->
+<div *ngIf="tasks.length === 0" class="no-task-message">
+  No tasks available. Add a new task to get started!
+</div>
+
+<!-- Adding new task section -->
+<div class="add-task-section">
+  <label>My Task:</label>
+  <input [(ngModel)]="newTask" (ngModelChange)="onInputChange()" placeholder="Enter a new task" required />
+
+  <label>Task Description:</label>
+  <textarea [(ngModel)]="newDesc" placeholder="Type about your task" required></textarea>
+  <!-- <div class="priority-add-container"> -->
+    <div class="priority-select">
+      <label>Priority:</label>
+      <select [(ngModel)]="newPriority">
+        <option value="Low">Low</option>
+        <option value="Medium">Medium</option>
+        <option value="High">High</option>
+      </select>
+    </div>
+
+  <!-- </div> -->
+
+    <button (click)="AddnewTask()">Add Task</button>
+  <p *ngIf="errormsg" style="color:red">{{ errormsg }}</p>
+</div>
+
+<!--  Task List -->
+<div #topOfBoard></div>
+<div class="task-list">
+  <div class="task-item" *ngFor="let task of tasks; index as i">
+
+    <app-task-card
+      [task]="task"
+      [index]="i"
+      (completedtitle)="OnTaskcompletion($event)"
+      (deleteTask)="OnTaskDelete($event)"
+      (editTask)="OnEditTask(i)">
+    </app-task-card>
+
+    <button (click)="openViewModal(task)">View</button>
+  </div>
+</div>
+
+<!--  Edit Task Modal -->
+<app-edit-task-modal
+  *ngIf="isEditModalOpen"
+  [title]="modalTitle"
+  [description]="modalDesc"
+  (save)="onSaveEdit($event)"
+  (cancel)="closeModal()">
+</app-edit-task-modal>
+
+<!-- View Task Modal -->
+<app-taskdetail
+  *ngIf="isViewModalOpen"
+  [task]="selectedViewTask"
+  (close)="closeViewModal()">
+</app-taskdetail>

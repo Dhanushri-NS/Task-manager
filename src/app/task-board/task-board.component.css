@@ -1,0 +1,142 @@
+.no-task-message {
+  margin-top: 2rem;
+  padding: 1rem;
+  background-color: #fff3cd;
+  color: #856404;
+  border: 1px solid #ffeeba;
+  border-radius: 5px;
+  text-align: center;
+  font-weight: 500;
+}
+
+.add-task-section {
+  background-color: #f8f9fa;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.add-task-section label {
+  font-weight: 600;
+  display: block;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.add-task-section input,
+.add-task-section textarea {
+  width: 100%;
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+.add-task-section button {
+  margin-top: 1rem;
+  padding: 0.6rem 1.2rem;
+  background-color: #007bff;
+  border: none;
+  color: white;
+  font-weight: 500;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.add-task-section button:hover {
+  background-color: #0056b3;
+}
+
+.task-list {
+  margin-top: 2rem;
+}
+
+.task-item {
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.task-item button {
+  padding: 0.4rem 0.8rem;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.task-item button:hover {
+  background-color: #218838;
+}
+.error {
+  color: red;
+  font-size: 0.85rem;
+  margin-top: 4px;
+}
+
+::ng-deep body.dark-mode .add-task-section {
+  background-color: #1e1e1e !important;
+  color: #ffffff;
+}
+
+::ng-deep body.dark-mode .add-task-section input,
+::ng-deep body.dark-mode .add-task-section textarea {
+  background-color: #2a2a2a !important;
+  border-color: #555;
+  color: #fff;
+}
+
+::ng-deep body.dark-mode .task-item {
+  background-color: #222 !important;
+  border-color: #444;
+  color: #eee;
+}
+
+/* ::ng-deep body.dark-mode .task-item button {
+  background-color: #006400 !important;
+  color: white;
+} */
+
+.priority-add-container {
+  display: flex;
+  align-items: flex-end;
+  gap: 1rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.priority-select {
+  flex: 1;
+}
+
+.priority-select label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.priority-select select {
+  width: 100%;
+  padding: 0.6rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+::ng-deep body.dark-mode .priority-select select {
+  background-color: #2a2a2a !important;
+  border-color: #555;
+  color: #fff;
+}

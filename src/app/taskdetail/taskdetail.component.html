@@ -1,0 +1,25 @@
+<!-- <h2>Task Details</h2>
+<p><strong>Title:</strong> {{ task?.title }}</p>
+<p><strong>Status:</strong> {{ task?.completed ? 'Completed' : 'Pending' }}</p>
+<button routerLink="/">Back to Board</button> -->
+<!-- <div class="task-details" >
+  <h2>Task Details</h2>
+  <p><strong>Title:</strong> {{ task?.title | uppercase}}</p>
+  <p><strong>Description:</strong> {{ task?.description }}</p>
+  <p><strong>Status:</strong> {{ task?.completed ? 'Completed' : 'Pending' }}</p>
+  <p><strong>Created On:</strong> {{ task?.createdAt | date }}</p>
+  <button class="back-btn" routerLink="/">Back to Board</button>
+</div> -->
+
+<div class="modal-backdrop" (click)="close.emit()"></div>
+
+<div class="modal-content">
+  <button class="close-btn" (click)="close.emit()">×</button>
+  <h2>Task Details</h2>
+  <p><strong>Title:</strong> {{ task?.title | uppercase }}</p>
+  <p><strong>Description:</strong> {{ task?.description }}</p>
+  <p><strong>Status:</strong> {{ task?.completed ? 'Completed' : 'Pending' }}</p>
+  <p><strong>Priority :</strong>{{task?.priority}}</p>
+  <p><strong>Created On:</strong> {{ task?.createdAt | date }}</p>
+</div>
+

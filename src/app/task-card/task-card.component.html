@@ -1,0 +1,11 @@
+<div class="task-title" [ngClass]="{ 'completedtask': task.completed }">
+  {{ index + 1 }}. {{ task.title }}
+</div>
+
+<button class="done-btn" (click)="Donebtn()" [disabled]="task.completed">
+  {{ task.completed ? 'Completed' : 'Mark As Done' }}
+</button>
+
+<button class="del-btn" (click)="Delbtn()"> Delete task</button>
+
+<button class="edit-btn" (click)="Editbtn()">Edit Task</button>

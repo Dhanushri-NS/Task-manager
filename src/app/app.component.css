@@ -1,0 +1,88 @@
+nav {
+  background-color: #007bff;
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.titlename {
+  font-size: 2rem;
+  margin: 0;
+  font-weight: bold;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #ffdd57;
+}
+
+.theme-icon {
+  font-size: 1.5rem;
+  color: #ffd700; 
+  cursor: pointer;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.theme-icon:hover {
+  transform: rotate(20deg) scale(1.2);
+}
+
+hr {
+  margin: 0;
+  border: none;
+  border-top: 1px solid #ccc;
+}
+
+.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+.dark-mode button,
+.dark-mode input,
+.dark-mode textarea {
+  background-color: #2e2e2e;
+  color: #fff;
+  border: 1px solid #555;
+}
+
+.dark-mode .navbar {
+  background-color: #1a1a1a;
+  border-bottom: 1px solid #444;
+}
+
+.dark-mode .theme-icon {
+  color: #f0f0f0; 
+}
+
+body {
+  background-color: #ffffff;
+  color: #000000;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body.dark-mode {
+  background-color: #121212;
+  color: #f0f0f0;
+}
+
+body.dark-mode {
+  background-color: #121212;
+  color: #f0f0f0;
+}

@@ -1,0 +1,81 @@
+.task-title {
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.completedtask {
+  text-decoration: line-through;
+  color: #6c757d;
+  opacity: 0.7;
+}
+
+.done-btn {
+  padding: 0.4rem 1rem;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.done-btn:hover {
+  background-color: #218838;
+}
+
+.done-btn:disabled {
+  background-color: #6c757d;
+  cursor: not-allowed;
+}
+
+.del-btn{
+  color:white;
+  background-color: red;
+  padding: 0.4rem 1rem;
+  border : none;
+  border-radius: 5px;
+  font-weight: 500;
+  cursor: pointer;
+   margin-left: 0.5rem;
+
+}
+.edit-btn{
+  color:white;
+  background-color: blue;
+  padding : 0.4rem 1rem;
+  font-weight :500;
+  cursor:pointer;
+  margin-left: 0.5rem;
+  border: none;
+  border-radius: 5px
+}
+
+::ng-deep body.dark-mode .task-title {
+  color: #ffffff; 
+}
+
+::ng-deep body.dark-mode .completedtask {
+  color: #bbbbbb; 
+}
+::ng-deep body.dark-mode .task-item {
+  background-color: #2a2a2a;
+  color: #ffffff;
+  border-color: #444;
+}
+::ng-deep body.dark-mode .done-btn {
+  background-color: #4caf50;
+  color: #e0ffe0;
+}
+
+::ng-deep body.dark-mode .edit-btn {
+  background-color: #2196f3; 
+  color: #e0f7ff;
+}
+
+::ng-deep body.dark-mode .del-btn {
+  background-color: #e53935; 
+  color: #ffe0e0;
+}
